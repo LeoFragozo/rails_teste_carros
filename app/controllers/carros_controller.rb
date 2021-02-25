@@ -12,14 +12,13 @@ class CarrosController < ApplicationController
   end
 
   def create
-    carro =  Carro.create(carro_params)
+    @carro = Carro.new(carro_params)
 
-    redirect_to carros.path
-  end
-
-
-  def edit 
-
+    if @carro.save
+      redirect_to @carro
+    else
+      render :new
+    end
   end
 
   private
