@@ -45,6 +45,6 @@ class CarrosController < ApplicationController
   private
 
   def carro_params
-    params.require(:carro).permit(:marca, :modelo, :ano, :descricao, :valor)
+    params.require(:carro).permit(:marca, :modelo, :ano, :descricao, :valor, :image)
   end
 end

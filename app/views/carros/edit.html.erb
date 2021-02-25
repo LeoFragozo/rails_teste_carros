@@ -1,3 +1,6 @@
 <h3> Editar um carro </h3>
 
-<%= render "form", carro: @carro %>
+<%= render "form", carro: @carro %> <br>
+
+<%= image_tag @carro.image %>
+<li><%= link_to "Voltar para o index", root_path(@carro) %></li>

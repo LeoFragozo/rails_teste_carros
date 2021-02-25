@@ -4,4 +4,5 @@ class Carro < ApplicationRecord
   validates :ano, presence: true
   validates :descricao, presence: true
   validates :valor, presence: true
+  has_one_attached :image, :dependent => :destroy
 end
