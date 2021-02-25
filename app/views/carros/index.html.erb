@@ -1,6 +1,11 @@
+<h1>Lista de Carros</h1>
+
 <ul>
   <% @carros.each do |carro| %>
-    <li><%= link_to carro.modelo, carro_path(carro)  %></li>
+    <li>
+      <a href="/carros/<%= carro.id %>">
+        <%= carro.modelo %>
+      </a>
+    </li>
   <% end %>
 </ul>
-<%= link_to "Novo Carro", new_carro_path %>

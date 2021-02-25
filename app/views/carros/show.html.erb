@@ -3,4 +3,9 @@
  <h3>Modelo: <%= @carro.modelo %></h1>
  <h3>Ano: <%= @carro.ano %></h1>
  <h3>Descriçao: <%= @carro.descricao %></h1>
- <h3>Valor: <%= @carro.valor %></h1>
+ <h3>Valor: <%= @carro.valor     %></h1>
+ <ul>
+</ul>
+<li><%= link_to "Editar carro", edit_carro_path(@carro) %></li> 
+<li><%= link_to "Deletar carro", carro_path(@carro), method: :delete,
+data: { confirm: "Voce tem certeza que quer deletar esse carro?" } %></li> 

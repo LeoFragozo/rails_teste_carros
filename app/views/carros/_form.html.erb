@@ -1,0 +1,46 @@
+<%= form_with model: article do |form| %>
+    <div>
+      <%= form.label :marca %><br>
+      <%= form.text_field :marca %>
+      <% carro.errors.full_messages_for(:marca).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+  
+    <div>
+    <%= form.label :modelo %><br>
+    <%= form.text_field :modelo %>
+    <% carro.errors.full_messages_for(:marca).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+  <%= form.label :ano %><br>
+  <%= form.text_field :ano %>
+  <% carro.errors.full_messages_for(:marca).each do |message| %>
+    <div><%= message %></div>
+  <% end %>
+</div>
+
+  <div>
+  <%= form.label :descricao %><br>
+  <%= form.text_field :descricao %>
+  <% carro.errors.full_messages_for(:marca).each do |message| %>
+    <div><%= message %></div>
+  <% end %>
+  </div>
+
+  <div>
+  <%= form.label :valor %><br>
+  <%= form.text_field :valor %>
+  <% carro.errors.full_messages_for(:marca).each do |message| %>
+    <div><%= message %></div>
+  <% end %>
+  </div>
+
+    <div>
+      <%= form.submit %>
+    </div>
+  <% end %>
+  
